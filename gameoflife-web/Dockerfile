@@ -1,8 +1,8 @@
 FROM tomcat:8-jre8
 
-RUN rm -rf /usr/local/tomcat/webapps/*
+RUN rm -rf /usr/share/tomcat/webapps/*
 
-COPY /var/lib/jenkins/workspace/GameOfLife/gameoflife-web/target/gameoflife.war /usr/local/tomcat/webapps/ROOT.war
+COPY /var/lib/jenkins/workspace/GameOfLife/gameoflife-web/target/gameoflife.war /usr/share/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
